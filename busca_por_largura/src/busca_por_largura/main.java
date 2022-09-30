@@ -13,7 +13,7 @@ public class main {
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("ATIVIDADE 1: ");
 		//adicionar o file do txt
-		File doc = new File("C:\\Users\\supor\\Desktop\\pequenoG.txt");
+		File doc = new File("C:\\Users\\supor\\Desktop\\pequenoG2.txt");
 		Scanner obj = new Scanner(doc);
 
 		alocar(grafos, obj);
@@ -39,12 +39,12 @@ public class main {
 		System.out.println("\nBFS + IMPRESSÃO :");
 
 		// VERTICE INICIAL
-		int s = 0;
+		int s = 1;
 		System.out.println("\nBFS");
 		BFS(grafos, s);
 
 		// VERTICE FINAL
-		int v = 4;
+		int v = 36;
 		System.out.println("\nCAMINHO MENOR ENTRE " + s + " E " + v + ":");
 		impressao(grafos, s, v);
 	}
@@ -55,7 +55,7 @@ public class main {
 			String[] textoSeparado = obj.nextLine().split(" ");
 			if (textoSeparado.length == 1) {
 				System.out.println("Ordem: " + textoSeparado[0]);
-				System.out.println("Tamanaho: " + obj.nextLine());
+				System.out.println("Tamanho: " + obj.nextLine());
 
 			} else {
 				Grafo g = new Grafo(Integer.parseInt(textoSeparado[0]));
